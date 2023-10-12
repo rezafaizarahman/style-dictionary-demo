@@ -269,6 +269,34 @@ StyleDictionaryPackage.registerTransform({
   },
 });
 
+StyleDictionaryPackage.registerTransform({
+  name: "ygg/remToDouble",
+  type: "value",
+  matcher: function (prop) {
+    return (
+      prop.attributes.category === "spacing" ||
+      prop.attributes.category === "radii"
+    );
+  },
+  transformer: function (prop) {
+    return parseFloat(prop.value, 10).toFixed(1);
+  },
+});
+
+StyleDictionaryPackage.registerTransform({
+  name: "ygg/textStyles",
+  type: "value",
+  matcher: function (prop) {
+    return (
+      prop.attributes.category === "spacing" ||
+      prop.attributes.category === "radii"
+    );
+  },
+  transformer: function (prop) {
+    return parseFloat(prop.value, 10).toFixed(1);
+  },
+});
+
 StyleDictionaryPackage.registerTransformGroup({
   name: "styleguide",
   transforms: ["attribute/cti", "name/cti/kebab", "size/px", "color/css"],
@@ -302,14 +330,31 @@ StyleDictionaryPackage.registerTransformGroup({
   transforms: ["attribute/cti", "name/cti/camel", "size/pxToDp"],
 });
 
+StyleDictionaryPackage.registerTransformGroup({
+  name: "tokens-flutter",
+  // to see the pre-defined "android" transformation use: console.log(StyleDictionaryPackage.transformGroup['android']);
+  transforms: [
+    "attribute/cti",
+    "name/ti/camel",
+    "color/hex8flutter",
+    "content/flutter/literal",
+    "asset/flutter/literal",
+    "font/flutter/literal",
+    "ygg/remToDouble",
+    "ygg/textStyles",
+  ],
+});
+
 StyleDictionaryPackage.transformGroup["android"];
 
 console.log("Build started...");
 
 // PROCESS THE DESIGN TOKENS FOR THE DIFFEREN BRANDS AND PLATFORMS
 
-["web", "ios", "android"].map(function (platform) {
-  ["brand#1", "brand#2", "brand#3"].map(function (brand) {
+["web", "ios", "android", "flutter"].map(function (platform) {
+  ["consumer_light", "consumer_dark", "professional_light"].map(function (
+    brand
+  ) {
     console.log("\n==============================================");
     console.log(`\nProcessing: [${platform}] [${brand}]`);
 
@@ -325,6 +370,8 @@ console.log("Build started...");
       StyleDictionary.buildPlatform("ios");
     } else if (platform === "android") {
       StyleDictionary.buildPlatform("android");
+    } else if (platform === "flutter") {
+      StyleDictionary.buildPlatform("flutter");
     }
     StyleDictionary.buildPlatform("styleguide");
 
