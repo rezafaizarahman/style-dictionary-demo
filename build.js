@@ -287,13 +287,23 @@ StyleDictionaryPackage.registerTransform({
   name: "ygg/textStyles",
   type: "value",
   matcher: function (prop) {
-    return (
-      prop.attributes.category === "spacing" ||
-      prop.attributes.category === "radii"
-    );
+    return prop.attributes.category === "typography";
   },
   transformer: function (prop) {
-    return parseFloat(prop.value, 10).toFixed(1);
+    // return parseFloat(prop.value, 10).toFixed(1);
+    const t = prop.value;
+
+    return `TextStyle(
+    package: 'yggdrasil',
+    fontFamily: '${t.fontFamily}',
+    fontWeight: FontWeight.${t.fontWeight},
+    fontStyle: FontStyle.${t.fontStyle},
+    fontSize: ${t.fontSize},
+    decoration: TextDecoration.none,
+    letterSpacing: ${t.letterSpacing},
+    height: ${t.lineHeight},
+    leadingDistribution: TextLeadingDistribution.even,
+    )`;
   },
 });
 
@@ -321,13 +331,13 @@ StyleDictionaryPackage.registerTransformGroup({
 StyleDictionaryPackage.registerTransformGroup({
   name: "tokens-ios",
   // to see the pre-defined "ios" transformation use: console.log(StyleDictionaryPackage.transformGroup['ios']);
-  transforms: ["attribute/cti", "name/cti/camel", "size/pxToPt"],
+  transforms: ["attribute/cti", "name/cti/camel"],
 });
 
 StyleDictionaryPackage.registerTransformGroup({
   name: "tokens-android",
   // to see the pre-defined "android" transformation use: console.log(StyleDictionaryPackage.transformGroup['android']);
-  transforms: ["attribute/cti", "name/cti/camel", "size/pxToDp"],
+  transforms: ["attribute/cti", "name/cti/camel"],
 });
 
 StyleDictionaryPackage.registerTransformGroup({
