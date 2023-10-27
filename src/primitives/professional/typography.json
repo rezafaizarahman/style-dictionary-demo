@@ -1,0 +1,140 @@
+{
+  "fontFamily": {
+    "heading": {
+      "value": "Dosis",
+      "type": "fontFamily"
+    },
+    "text": {
+      "value": "OpenSans",
+      "type": "fontFamily"
+    }
+  },
+  "lineHeight": {
+    "50": {
+      "value": "16",
+      "type": "lineHeight"
+    },
+    "100": {
+      "value": "20",
+      "type": "lineHeight"
+    },
+    "200": {
+      "value": "24",
+      "type": "lineHeight"
+    },
+    "300": {
+      "value": "28",
+      "type": "lineHeight"
+    },
+    "400": {
+      "value": "32",
+      "type": "lineHeight"
+    },
+    "500": {
+      "value": "40",
+      "type": "lineHeight"
+    },
+    "600": {
+      "value": "48",
+      "type": "lineHeight"
+    },
+    "700": {
+      "value": "56",
+      "type": "lineHeight"
+    },
+    "800": {
+      "value": "64",
+      "type": "lineHeight"
+    },
+    "900": {
+      "value": "72",
+      "type": "lineHeight"
+    }
+  },
+  "fontWeight": {
+    "regular": {
+      "value": "Regular",
+      "type": "fontWeight"
+    },
+    "medium": {
+      "value": "SemiBold",
+      "type": "fontWeight"
+    },
+    "bold": {
+      "value": "Bold",
+      "type": "fontWeight"
+    }
+  },
+  "fontSize": {
+    "50": {
+      "value": "12",
+      "type": "dimension"
+    },
+    "100": {
+      "value": "14",
+      "type": "dimension"
+    },
+    "200": {
+      "value": "16",
+      "type": "dimension"
+    },
+    "300": {
+      "value": "20",
+      "type": "dimension"
+    },
+    "400": {
+      "value": "24",
+      "type": "dimension"
+    },
+    "500": {
+      "value": "28",
+      "type": "dimension"
+    },
+    "600": {
+      "value": "32",
+      "type": "dimension"
+    },
+    "700": {
+      "value": "40",
+      "type": "dimension"
+    },
+    "800": {
+      "value": "48",
+      "type": "dimension"
+    },
+    "900": {
+      "value": "56",
+      "type": "dimension"
+    }
+  },
+  "letterSpacing": {
+    "none": {
+      "value": "0",
+      "type": "dimension"
+    }
+  },
+  "textCase": {
+    "none": {
+      "value": "none",
+      "type": "textCase"
+    }
+  },
+  "textDecoration": {
+    "none": {
+      "value": "none",
+      "type": "textDecoration"
+    }
+  },
+  "paragraphSpacing": {
+    "none": {
+      "value": "0",
+      "type": "dimension"
+    }
+  },
+  "fontStyle": {
+    "normal": {
+      "value": "normal",
+      "type": "fontStyle"
+    }
+  }
+}

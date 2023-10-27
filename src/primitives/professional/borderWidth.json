@@ -1,0 +1,20 @@
+{
+  "borderWidth": {
+    "0": {
+      "value": "0",
+      "type": "dimension"
+    },
+    "50": {
+      "value": "1",
+      "type": "dimension"
+    },
+    "100": {
+      "value": "2",
+      "type": "dimension"
+    },
+    "200": {
+      "value": "3",
+      "type": "dimension"
+    }
+  }
+}

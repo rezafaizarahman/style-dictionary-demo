@@ -1,0 +1,36 @@
+{
+  "radii": {
+    "0": {
+      "value": "0",
+      "type": "dimension"
+    },
+    "50": {
+      "value": "5",
+      "type": "dimension"
+    },
+    "100": {
+      "value": "10",
+      "type": "dimension"
+    },
+    "200": {
+      "value": "15",
+      "type": "dimension"
+    },
+    "300": {
+      "value": "20",
+      "type": "dimension"
+    },
+    "400": {
+      "value": "25",
+      "type": "dimension"
+    },
+    "500": {
+      "value": "30",
+      "type": "dimension"
+    },
+    "600": {
+      "value": "50",
+      "type": "dimension"
+    }
+  }
+}
